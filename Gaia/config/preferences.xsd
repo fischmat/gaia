@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Enumeration of all types allowed for a setting -->
+	<xs:simpleType name="type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="integer" />
+			<xs:enumeration value="float" />
+			<xs:enumeration value="boolean" />
+			<xs:enumeration value="string" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- A specific setting -->
+	<xs:complexType name="setting">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string" />
+			<xs:element name="value" />
+			<xs:element name="type" type="type" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- A list of all settings -->
+	<xs:complexType name="setting_list">
+		<xs:sequence>
+			<xs:element name="setting" type="setting" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The root-element is a list of all settings -->
+	<xs:element name="setting_list" type="setting_list" />
+
+</xs:schema>

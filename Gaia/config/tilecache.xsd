@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="tile"> <!-- Type defining the characteristics of a cached tile -->
+		<xs:sequence>
+			<xs:element name="x" type="xs:integer" /> <!-- The x-coordinate of the tile -->
+			<xs:element name="y" type="xs:integer" /> <!-- The y-coordinate of the tile -->
+			<xs:element name="zoom" type="xs:integer" /> <!-- The zoomlevel of the tile -->
+			<xs:element name="style" type="xs:string" />  <!-- The style this tile is rendered in -->
+			<xs:element name="usecount" type="xs:integer" /> <!-- Times this tile was used in the past -->
+			<xs:element name="timestamp" type="xs:integer" /> <!-- UNIX-Timestamp when this tile was loaded -->
+			<xs:element name="file" type="xs:string" /> <!-- The image-file where the tile is stored -->
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="cache"> <!-- A list of all tiles in the cache -->
+		<xs:sequence>
+			<xs:element name="tile" type="tile" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="cache" type="cache" /> <!-- The root-element is a list of all tiles -->
+
+</xs:schema>

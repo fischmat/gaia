@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Restriction on the zoom-level range -->
+	<xs:simpleType name="tilezoom">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="18" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Type defining a server of a style -->
+	<xs:complexType name="subserver">
+		<xs:sequence>
+			<xs:element name="host" type="xs:string" />
+			<xs:element name="maxcons" type="xs:integer" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Type defining a style -->
+	<xs:complexType name="style">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" /> <!-- The name of the style -->
+			<!-- The syntax to use for the servers. Valid parameters:
+				 $s: The name of the subserver.		
+				 $z: The zoomlevel
+				 $x: The x-coordinate of the tiles.
+				 $y: The y-coordinate of the tiles.
+			 -->
+			<xs:element name="syntax" type="xs:string" />
+			<xs:element name="subserver" type="subserver" minOccurs="1" maxOccurs="unbounded" /> <!-- The subservers providing the tiles -->
+			<xs:element name="minzoom" type="tilezoom" minOccurs="0" /> <!-- The minimum zoomlevel the server accepts -->
+			<xs:element name="maxzoom" type="tilezoom" minOccurs="0" /> <!-- The maximum zoomlevel the server accepts -->
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="style_list"> <!-- A list of all styles -->
+		<xs:sequence>
+			<xs:element name="style" type="style" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="style_list" type="style_list" /> <!-- The root-element is a list of all styles -->
+
+</xs:schema>

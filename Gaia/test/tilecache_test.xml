@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- To be used in sep.gaia.tiles2d.test.TileCacheTest -->
+<cache>
+	<tile>
+		<x>6</x>
+		<y>7</y>
+		<zoom>5</zoom>
+		<style>OpenStreetMap - DE</style>
+		<usecount>42</usecount>
+		<timestamp>1337</timestamp>
+		<file>cache/OpenStreetMap+-+DE/5/6/7.png</file>
+	</tile>
+</cache>

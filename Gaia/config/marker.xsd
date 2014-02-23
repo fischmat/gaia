@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:complexType name="marker"> <!-- Type defining a marker -->
+
+		<xs:sequence>
+
+			<xs:element name="name" type="xs:string" /> <!-- The name of the marker -->
+
+			<xs:element name="long" type="xs:float" /> <!-- The longitude of the marked position -->
+
+			<xs:element name="lat" type="xs:float" /> <!-- The latitude of the marked position -->
+
+			<xs:element name="zoom" type="xs:float" /> <!-- The zoom of the marked position -->
+
+			<xs:element name="time" type="xs:long" /> <!-- The time of the markers creation as UNIX-timestamp -->
+
+		</xs:sequence>
+
+	</xs:complexType>
+
+	
+	<xs:complexType name="marker_list"> <!-- A list of all markers -->
+
+		<xs:sequence>
+
+			<xs:element name="marker" type="marker" minOccurs="0" maxOccurs="unbounded" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+
+
+	<xs:element name="marker_list" type="marker_list" />
+ <!-- The root-element is a list of all markers -->
+
+
+</xs:schema>

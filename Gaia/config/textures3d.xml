@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<texture_list>
+	<texture>
+		<name>Satellit</name>
+		<file>res/earth_geo.png</file>
+	</texture>
+	<texture>
+		<name>Schwarz-Weiß</name>
+		<file>res/earth_inverted.png</file>
+	</texture>
+	<texture>
+		<name>Zeitzonen</name>
+		<file>res/earth_timezones.png</file>
+	</texture>
+	<texture>
+		<name>Nachts</name>
+		<file>res/earth_night.png</file>
+	</texture>
+</texture_list>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<style_list>
+	<style>
+		<name>OpenStreetMap - DE</name>
+		<syntax>http://$s/$z/$x/$y.png</syntax>
+		<subserver>
+			<host>a.tile.openstreetmap.com</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<subserver>
+			<host>b.tile.openstreetmap.com</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<subserver>
+			<host>c.tile.openstreetmap.com</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<maxzoom>18</maxzoom>
+	</style>
+	<style>
+		<name>Debug-Tiles</name>
+		<syntax>http://$s/~fischmat/tiles.php?x=$x&amp;y=$y&amp;z=$z</syntax>
+		<subserver>
+			<host>students.fim.uni-passau.de</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<maxzoom>15</maxzoom>
+	</style>
+	<style>
+		<name>Cycle Map</name>
+		<syntax>http://$s/cycle/$z/$x/$y.png</syntax>
+		<subserver>
+			<host>a.tile.opencyclemap.org</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<subserver>
+			<host>b.tile.opencyclemap.org</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<subserver>
+			<host>c.tile.opencyclemap.org</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<maxzoom>18</maxzoom>
+	</style>
+	<style>
+		<name>OpenStreetBrowser</name>
+		<syntax>http://$s/tiles/basemap_base/$z/$x/$y.png</syntax>
+		<subserver>
+			<host>tiles-base.openstreetbrowser.org</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<maxzoom>16</maxzoom>
+	</style>
+	<style>
+		<name>ÖPNV-Karte</name>
+		<syntax>http://$s/tilegen/$z/$x/$y.png</syntax>
+		<subserver>
+			<host>tile.memomaps.de</host>
+			<maxcons>4</maxcons>
+		</subserver>
+		<maxzoom>16</maxzoom>
+	</style>
+</style_list>
+

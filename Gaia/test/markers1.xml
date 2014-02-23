@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<marker_list>
+	<marker>
+		<name>Zu Hause</name>
+		<long>12.909687</long>
+		<lat>48.744545</lat>
+		<zoom>13</zoom>
+		<time>1387212009</time>
+	</marker>
+	<marker>
+		<name>Nullpunkt</name>
+		<long>0</long>
+		<lat>0</lat>
+		<zoom>12</zoom>
+		<time>1387212309</time>
+	</marker>
+	<marker>
+		<name>Irgendwo im Nirgendwo</name>
+		<long>15.909687</long>
+		<lat>41.744545</lat>
+		<zoom>7</zoom>
+		<time>138723523</time>
+	</marker>
+</marker_list>
