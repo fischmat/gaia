@@ -43,35 +43,37 @@ public class CopyrightLayer extends AbstractLayer {
 			TextureCoords texCoords = tex.getImageTexCoords();
 			
 			FloatBoundingBox box = adapter.getDrawBox();
-			FloatVector3D upperLeft = box.getUpperLeft();
-			FloatVector3D upperRight = box.getUpperRight();
-			FloatVector3D lowerLeft = box.getLowerLeft();
-			FloatVector3D lowerRight = box.getLowerRight();
-			
-			gl.glMatrixMode(GL2.GL_PROJECTION);
-			gl.glLoadIdentity();
-			gl.glOrthof(-1, 1, 
-						-1, 1, 
-						-10000, 10000);
-			
-			gl.glDisable(GL2.GL_DEPTH_TEST);
-			
-			gl.glMatrixMode(GL2.GL_MODELVIEW);
-			
-			// Lift the x-y-pane up:
-			gl.glTranslatef(0, 0, height);
-			
-			// Draw texture.
-			gl.glBegin(GL2.GL_QUADS);
-			gl.glTexCoord2f(texCoords.left(), texCoords.top());
-			gl.glVertex3f(upperLeft.getX(), upperLeft.getY(), 0.0f);
-			gl.glTexCoord2f(texCoords.left(), texCoords.bottom());
-			gl.glVertex3f(lowerLeft.getX(), lowerLeft.getY(), 0.0f);
-			gl.glTexCoord2f(texCoords.right(), texCoords.bottom());
-			gl.glVertex3f(lowerRight.getX(), lowerRight.getY(), 0.0f);
-			gl.glTexCoord2f(texCoords.right(), texCoords.top());
-			gl.glVertex3f(upperRight.getX(), upperRight.getY(), 0.0f);
-			gl.glEnd();
+			if(box != null) {
+				FloatVector3D upperLeft = box.getUpperLeft();
+				FloatVector3D upperRight = box.getUpperRight();
+				FloatVector3D lowerLeft = box.getLowerLeft();
+				FloatVector3D lowerRight = box.getLowerRight();
+				
+				gl.glMatrixMode(GL2.GL_PROJECTION);
+				gl.glLoadIdentity();
+				gl.glOrthof(-1, 1, 
+							-1, 1, 
+							-10000, 10000);
+				
+				gl.glDisable(GL2.GL_DEPTH_TEST);
+				
+				gl.glMatrixMode(GL2.GL_MODELVIEW);
+				
+				// Lift the x-y-pane up:
+				gl.glTranslatef(0, 0, height);
+				
+				// Draw texture.
+				gl.glBegin(GL2.GL_QUADS);
+				gl.glTexCoord2f(texCoords.left(), texCoords.top());
+				gl.glVertex3f(upperLeft.getX(), upperLeft.getY(), 0.0f);
+				gl.glTexCoord2f(texCoords.left(), texCoords.bottom());
+				gl.glVertex3f(lowerLeft.getX(), lowerLeft.getY(), 0.0f);
+				gl.glTexCoord2f(texCoords.right(), texCoords.bottom());
+				gl.glVertex3f(lowerRight.getX(), lowerRight.getY(), 0.0f);
+				gl.glTexCoord2f(texCoords.right(), texCoords.top());
+				gl.glVertex3f(upperRight.getX(), upperRight.getY(), 0.0f);
+				gl.glEnd();
+			}
 		}
 		
 		// Draw next layer.
