@@ -31,3 +31,4 @@ local.properties
 screenshots/*
 /cache/
 /*.log
+/*.txt
