@@ -38,7 +38,8 @@ public class Environment {
 							 SCREENSHOT_BLEND_TEXTURE,
 							 CREDITS_TEXTURE_FILE,
 							 OSM_COPYRIGHT_TEXTURE_FILE,
-							 VERSION_STRING
+							 VERSION_STRING,
+							 SETTINGS_FILE_PATH
 							 };
 	
 	/**
@@ -103,6 +104,7 @@ public class Environment {
 		case CREDITS_TEXTURE_FILE: return "res" + System.getProperty("file.separator") + "credits.png";
 		case OSM_COPYRIGHT_TEXTURE_FILE: return "res" + System.getProperty("file.separator") + "osmcpy.png";
 		case VERSION_STRING: return "Version 1.0.0.0 Stable";
+		case SETTINGS_FILE_PATH: return "config" + System.getProperty("file.separator") + "settings.xml";
 		default: return "";
 		}
 	}
