@@ -59,7 +59,6 @@ public class MarkerBarListener extends MouseAdapter {
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		if (arg0.getClickCount() > 1) {
-			//System.out.println(markerList.get(list.getSelectedIndex()).getName());
 			MarkerResource marker = markerList.get(list.getSelectedIndex());
 			FloatVector3D vector = new FloatVector3D(marker.getLon(), marker.getLat(), marker.getZoom());
 			

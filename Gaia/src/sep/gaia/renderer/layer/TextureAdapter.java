@@ -227,8 +227,6 @@ abstract class TextureAdapter<R extends DataResource> extends ResourceAdapter<R>
 			 // Check if the secondary texture-cache has exceeded its limit:
 			 if(secondaryTextures.size() >= MAXSIZE_SECONDARY_TEXCACHE) {
 				 
-				 System.out.println("Clearing secondary cache!");
-				 
 				 // Destroy the first inserted entries:
 				 for(int i = 0; i < DESTROY_COUNT; i++) {
 					 Texture removedTexture = secondaryTextures.get(0).getImage();
@@ -381,8 +379,6 @@ abstract class TextureAdapter<R extends DataResource> extends ResourceAdapter<R>
 				
 				// Get the file-suffix:
 				String suffix = texFilePath.substring(suffixPosition);
-				
-				System.out.println("Loading: " + texFilePath);
 				
 				// Generate the texture-data from the file:
 				File textureFile = new File(texFilePath);

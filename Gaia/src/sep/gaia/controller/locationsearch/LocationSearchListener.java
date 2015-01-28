@@ -46,7 +46,6 @@ public class LocationSearchListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand() == "OK") {
-			System.out.println(locationList.get(list.getSelectedIndex()).getName());
 			Location location = locationList.get(list.getSelectedIndex());
 			FloatVector3D vector = new FloatVector3D(location.getPosition()[0], location.getPosition()[1], 0);
 			state.setPosition(AlgoUtil.geoToGL(vector));

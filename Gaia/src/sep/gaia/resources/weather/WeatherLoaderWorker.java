@@ -120,8 +120,6 @@ public class WeatherLoaderWorker extends
 		String requestURL = new String(API_REQUEST_URL);
 		requestURL = requestURL.replace("$lat", String.valueOf(lat));
 		requestURL = requestURL.replace("$lon", String.valueOf(lon));
-
-		System.out.println(requestURL);
 		
 		return requestURL;
 	}

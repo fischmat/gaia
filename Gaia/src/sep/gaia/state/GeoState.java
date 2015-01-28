@@ -97,7 +97,6 @@ public class GeoState extends State {
 			float distance_x = this.center.getX() - ((FloatVector3D) cen).getX();
 			float distance_y = this.center.getY() - ((FloatVector3D) cen).getY();
 			this.center = (FloatVector3D) cen;
-			System.out.println(boundingBox.getUpperLeft().getX());
 			float uL_x = boundingBox.getUpperLeft().getX()+distance_x;
 			float uL_y = boundingBox.getUpperLeft().getY()-distance_y;
 			float lR_x = boundingBox.getUpperLeft().getX()-distance_x;

@@ -96,7 +96,6 @@ public class GAIAToolBar extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				glState.rotate(new FloatVector3D(0, 0, 10));
-				System.out.println("CW");
 
 			}
 		});
@@ -110,7 +109,6 @@ public class GAIAToolBar extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				glState.rotate(new FloatVector3D(0, 0, -10));
-				System.out.println("-CW");
 
 			}
 		});

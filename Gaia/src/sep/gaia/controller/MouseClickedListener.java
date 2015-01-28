@@ -82,7 +82,6 @@ public class MouseClickedListener implements MouseListener {
 		FloatVector3D vector = new FloatVector3D(AlgoUtil.glCoordsPerPixelRange(
 				e.getX(), canvas.getWidth(), distance1) + upperleft.getX(), -AlgoUtil.glCoordsPerPixelRange(
 						e.getY(), canvas.getHeight(), distance2) + upperleft.getY(), glState.getZoom());*/
-		//System.out.println("vector: " + vector.getX() + ", " + vector.getY());
 		
 		
 		int canvasWidth = GaiaCanvas.getInstance().getWidth();

@@ -65,8 +65,6 @@ public class MouseDraggedListener3d implements MouseMotionListener {
 		// rotate around the amount by which the mouse has moved
 		state.rotate(new FloatVector3D(scrollY, scrollX, 0));
 		
-		System.out.println(state.getRotation());
-		
 		// keep track of the mouse position
 		this.mouseX = x;
 		this.mouseY = y;
